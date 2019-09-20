@@ -7,7 +7,7 @@ def prime?(input)
 evaluators = divide_by.map do |num|
   input.to_f % num
   end
-  evaluators.all?{|i| i == 0}
+  evaluators.none?{|i| i == 0}
      end
 end 
   
