@@ -5,13 +5,9 @@ def prime?(input)
     false
   else
 evaluators = divide_by.map do |num|
-  input.to_f / num
+  input.to_f % num
   end
-   if evaluators.include?(Integer)
-    false
-  else
-    true
+  evaluators.all?{|i| i == 0}
      end
-  end
 end 
   
